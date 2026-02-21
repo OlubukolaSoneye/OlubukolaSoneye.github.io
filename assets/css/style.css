@@ -124,147 +124,89 @@ nav a:hover {
   margin: 0 0 18px;
 }
 
-/* ===== PROJECTS ===== */
-#projects h2 {
-  font-size: 46px;
-  text-align: center;
-  margin-bottom: 45px;
-}
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Selected Projects</h2>
 
-/* Key fix:
-   - Use fixed-ish column widths so leftover space can be centered
-   - Center the whole grid when a row has fewer cards
-*/
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 340px));
-  gap: 28px;
-  justify-content: center;   /* centers the last row */
-  align-items: stretch;
-}
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assets/images/pdf-extraction.jpg" class="top" alt="AI PDF Extraction Project">
+        <div class="project-card-content">
+          <h3>AI-Powered PDF Data Extraction (Gemini API)</h3>
+          <p>
+            Built an AI automation pipeline using Python and Gemini API to extract structured data from scanned PDF documents.
+            Reduced manual document processing time by 60% and standardised reporting outputs.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/OlubukolaSoneye/East-Midlands-Chamber-AI-Powered-PDF-reader-Automation-Project-" target="_blank" class="btn">Documentation</a>
+          </div>
+        </div>
+      </div>
 
-.project-card {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="assets/images/crime-analysis.jpg" class="top" alt="UK Crime Data Analysis">
+        <div class="project-card-content">
+          <h3>UK Crime Data Analysis (Apache Spark)</h3>
+          <p>
+            Processed large-scale UK Police datasets using PySpark and Spark SQL to identify spatial and temporal crime trends.
+            Integrated multi-source datasets and analysed over 1.8M+ records.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/OlubukolaSoneye/United-Kingdom-Crime-Data-Analysis-using-Apache-Spark" target="_blank" class="btn">Documentation</a>
+          </div>
+        </div>
+      </div>
 
-  display: flex;            /* makes equal-height cards easier */
-  flex-direction: column;
-}
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="assets/images/airline-ml.jpg" class="top" alt="Airline Passenger Satisfaction ML">
+        <div class="project-card-content">
+          <h3>Airline Passenger Satisfaction (Machine Learning)</h3>
+          <p>
+            Developed predictive models using SAS (Logistic Regression & Decision Trees) to identify key drivers of customer dissatisfaction.
+            Achieved ROC score of 0.98.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/OlubukolaSoneye/Airline-Passenger-Satisfaction-Using-Machine-Learning" target="_blank" class="btn">Documentation</a>
+          </div>
+        </div>
+      </div>
 
-.project-card:hover {
-  transform: translateY(-6px);
-}
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="assets/images/bank-dashboard.jpg" class="top" alt="Bank Performance Dashboard">
+        <div class="project-card-content">
+          <h3>Bank Performance & Operational Analytics</h3>
+          <p>
+            Designed an interactive Power BI dashboard analysing 1,000+ banking transactions to track KPIs, fraud indicators and bandwidth performance tiers.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/OlubukolaSoneye/Bank-Performance-and-Operational-Analytics" target="_blank" class="btn">Documentation</a>
+            <a href="https://app.powerbi.com/groups/me/reports/2e0b58a6-e735-4c45-92f4-31a6c571e1d5/d74678b5934723b76859?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
+          </div>
+        </div>
+      </div>
 
-.project-card img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  object-position: center;  /* crop from the center by default */
-  display: block;
-}
-
-/* If one specific image crops badly (like cutting heads),
-   add class="top" to that <img> and this will help */
-.project-card img.top {
-  object-position: center top;
-}
-
-.project-card-content {
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;                  /* pushes buttons to bottom */
-}
-
-.project-card-content h3 {
-  font-size: 22px;
-  margin: 0 0 10px;
-  line-height: 1.25;
-}
-
-.project-card-content p {
-  font-size: 17px;
-  margin: 0 0 14px;
-  line-height: 1.55;
-}
-
-/* Buttons always sit at the bottom of the card */
-.project-buttons {
-  margin-top: auto;
-  padding-top: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #1f2a44;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 15px;
-  margin-right: 10px;
-}
-
-.btn:hover {
-  background-color: #2e3b5c;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-/* ===== SKILLS ===== */
-#skills h2 {
-  font-size: 46px;
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.skills-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-}
-
-.skill-column {
-  background: white;
-  padding: 26px;
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-}
-
-.skill-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.skill-header i {
-  font-size: 20px;
-  color: #1f2a44;
-}
-
-.skill-column h3 {
-  font-size: 22px;
-  margin: 0;
-}
-
-.skill-list {
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-
-.skill-list li {
-  margin: 8px 0;
-  font-size: 18px;
-}
+      <!-- Project 5 -->
+      <div class="project-card">
+        <img src="assets/images/renewableenergy-dashboard.jpg" class="top" alt="Renewable Energy Consumption Dashboard">
+        <div class="project-card-content">
+          <h3>Renewable Energy Consumption Trends (1970–2023)</h3>
+          <p>
+            Designed an interactive Power BI dashboard analysing renewable energy consumption trends from 1970 to 2023.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/OlubukolaSoneye/Renewable-Energy-Consumption-Trends" target="_blank" class="btn">Documentation</a>
+            <a href="https://app.powerbi.com/groups/me/reports/e6e6151f-b33c-42bd-b886-d4f8dc4122af/dbe1b43f1b5a9fa3b247?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 /* ===== CONTACT ===== */
 #contact h2 {
