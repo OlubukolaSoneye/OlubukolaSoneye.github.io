@@ -18,7 +18,10 @@ Built DAX measures and structured data models to segment performance across band
 ---
 
 ### AI-Powered PDF Reader – East Midlands Chamber
-AI-Powered PDF Reader – East Midlands Chamber
+Tech Stack: Python, Gemini API, OCR, Automation, Data Structuring
+
+Developed an AI-driven automation solution using the Gemini API to extract structured tabular data from scanned PDF documents.
+Designed Python workflows to process unstructured text via OCR and output clean, analysis-ready datasets.
 
 **Impact:** Reduced manual document processing time by 60%, improved data consistency, and enhanced operational efficiency for business stakeholders.
 
