@@ -1,24 +1,37 @@
-/* ===== GLOBAL ===== */
+/* =========================
+   GLOBAL + TYPOGRAPHY
+========================= */
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     background-color: #f4f6f9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 18px;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    margin: 0 0 12px 0;
+}
+
+p {
+    margin: 0 0 14px 0;
 }
 
 .section {
     padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
 }
 
-/* ===== HEADER ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     background: linear-gradient(135deg, #1f2a44, #2e3b5c);
@@ -27,18 +40,33 @@ header {
     padding: 90px 20px;
 }
 
+header h1 {
+    font-size: 56px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 22px;
+    margin-bottom: 18px;
+    opacity: 0.95;
+}
+
 .social-links a {
     color: white;
     margin: 0 12px;
     font-size: 22px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
 }
 
 .social-links a:hover {
     opacity: 0.7;
 }
 
-/* ===== NAVIGATION ===== */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     background-color: #2e3b5c;
@@ -47,7 +75,7 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 15px 0;
+    padding: 14px 0;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -57,13 +85,28 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    font-size: 18px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   ABOUT (photo left, text right)
+   IMPORTANT: requires wrapper HTML
+========================= */
+
 .about-content {
     display: flex;
     align-items: center;
@@ -72,33 +115,37 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+.about-text {
+    max-width: 640px;
+}
+
+.about-text p {
+    font-size: 19px;
+}
+
+/* Circle wrapper */
 .profile-photo {
     width: 360px;
     height: 360px;
     border-radius: 50%;
-    overflow: hidden;              /* makes the wrapper a circle */
+    overflow: hidden;
     background: #fff;
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     flex: 0 0 360px;
 }
 
+/* Actual image inside circle */
 .profile-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* fills circle */
-    object-position: 50% 20%;      /* moves image DOWN so head isn't cut */
+    object-fit: cover;
+    object-position: 50% 18%; /* move image down so head isn't chopped */
     display: block;
 }
 
-/* Mobile: stack image on top */
-@media (max-width: 900px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ===== PROJECTS ===== */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects-grid {
     display: grid;
@@ -108,10 +155,10 @@ nav a:hover {
 
 .project-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
 .project-card:hover {
@@ -120,23 +167,40 @@ nav a:hover {
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 210px;
     object-fit: cover;
 }
 
 .project-card-content {
-    padding: 20px;
+    padding: 22px;
 }
 
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 16px;
     background-color: #1f2a44;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .btn:hover {
@@ -147,46 +211,132 @@ nav a:hover {
     background-color: #6c757d;
 }
 
-/* ===== SKILLS ===== */
+.btn-secondary:hover {
+    background-color: #5a636b;
+}
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills-table {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
 .skill-column {
     background: white;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 26px;
+    border-radius: 14px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
 }
 
-/* ===== CONTACT ===== */
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.skill-header i {
+    font-size: 22px;
+}
+
+.skill-column h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.skill-list {
+    padding-left: 18px;
+    margin: 0;
+    font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-form {
     background: white;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 32px;
+    border-radius: 14px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+}
+
+label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
-/* ===== FOOTER ===== */
+textarea {
+    resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background-color: #1f2a44;
     color: white;
     text-align: center;
     padding: 25px;
+    font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 44px;
+    }
+
+    header p {
+        font-size: 19px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 720px;
+    }
+
+    .profile-photo {
+        width: 300px;
+        height: 300px;
+        flex: 0 0 300px;
+    }
+
+    nav ul {
+        gap: 22px;
+        flex-wrap: wrap;
+        padding: 12px 10px;
+    }
 }
