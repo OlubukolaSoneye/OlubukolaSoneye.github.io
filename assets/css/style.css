@@ -124,18 +124,26 @@ nav a:hover {
   margin: 0 0 18px;
 }
 
+/* ================= PROJECTS ================= */
+
+#projects h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .project-card {
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
 }
 
 .project-card:hover {
@@ -144,33 +152,64 @@ nav a:hover {
 
 .project-card img {
   width: 100%;
-  height: 210px;
+  height: 220px;
   object-fit: cover;
-  object-position: center;
   display: block;
 }
 
-/* Use this only on images you want to crop from the TOP */
-.project-card img.top {
-  object-position: center top;
-}
-
 .project-card-content {
-  padding: 22px;
+  padding: 24px;
 }
 
 .project-card-content h3 {
   font-size: 22px;
-  margin: 0 0 10px;
+  margin-bottom: 12px;
 }
 
 .project-card-content p {
   font-size: 17px;
-  margin: 0 0 14px;
+  margin-bottom: 18px;
 }
 
 .project-buttons {
-  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ================= SKILLS ================= */
+
+#skills h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.skills-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-column {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.skill-header i {
+  font-size: 20px;
+}
+
+.skill-list li {
+  margin: 8px 0;
 }
 
 /* ===== CONTACT ===== */
