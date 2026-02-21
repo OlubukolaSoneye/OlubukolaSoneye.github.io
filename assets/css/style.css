@@ -131,10 +131,16 @@ nav a:hover {
   margin-bottom: 45px;
 }
 
+/* Key fix:
+   - Use fixed-ish column widths so leftover space can be centered
+   - Center the whole grid when a row has fewer cards
+*/
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 340px));
   gap: 28px;
+  justify-content: center;   /* centers the last row */
+  align-items: stretch;
 }
 
 .project-card {
@@ -143,6 +149,9 @@ nav a:hover {
   overflow: hidden;
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
+
+  display: flex;            /* makes equal-height cards easier */
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -153,25 +162,39 @@ nav a:hover {
   width: 100%;
   height: 210px;
   object-fit: cover;
+  object-position: center;  /* crop from the center by default */
   display: block;
+}
+
+/* If one specific image crops badly (like cutting heads),
+   add class="top" to that <img> and this will help */
+.project-card img.top {
+  object-position: center top;
 }
 
 .project-card-content {
   padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;                  /* pushes buttons to bottom */
 }
 
 .project-card-content h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  line-height: 1.25;
 }
 
 .project-card-content p {
   font-size: 17px;
   margin: 0 0 14px;
+  line-height: 1.55;
 }
 
+/* Buttons always sit at the bottom of the card */
 .project-buttons {
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
 .btn {
@@ -196,7 +219,6 @@ nav a:hover {
 .btn-secondary:hover {
   background-color: #5a6268;
 }
-
 /* ===== SKILLS ===== */
 #skills h2 {
   font-size: 46px;
