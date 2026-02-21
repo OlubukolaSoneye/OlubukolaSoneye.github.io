@@ -69,6 +69,6 @@ Integrated multi-source datasets, performed data cleansing and feature engineeri
 
 ## 📫 Contact
 
-LinkedIn: [Insert your LinkedIn link]  
+LinkedIn: [(https://www.linkedin.com/in/bukola-soneye/)]  
 
 ---
