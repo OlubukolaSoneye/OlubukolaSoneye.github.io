@@ -124,89 +124,54 @@ nav a:hover {
   margin: 0 0 18px;
 }
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Selected Projects</h2>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="assets/images/pdf-extraction.jpg" class="top" alt="AI PDF Extraction Project">
-        <div class="project-card-content">
-          <h3>AI-Powered PDF Data Extraction (Gemini API)</h3>
-          <p>
-            Built an AI automation pipeline using Python and Gemini API to extract structured data from scanned PDF documents.
-            Reduced manual document processing time by 60% and standardised reporting outputs.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/East-Midlands-Chamber-AI-Powered-PDF-reader-Automation-Project-" target="_blank" class="btn">Documentation</a>
-          </div>
-        </div>
-      </div>
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="assets/images/crime-analysis.jpg" class="top" alt="UK Crime Data Analysis">
-        <div class="project-card-content">
-          <h3>UK Crime Data Analysis (Apache Spark)</h3>
-          <p>
-            Processed large-scale UK Police datasets using PySpark and Spark SQL to identify spatial and temporal crime trends.
-            Integrated multi-source datasets and analysed over 1.8M+ records.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/United-Kingdom-Crime-Data-Analysis-using-Apache-Spark" target="_blank" class="btn">Documentation</a>
-          </div>
-        </div>
-      </div>
+.project-card:hover {
+  transform: translateY(-6px);
+}
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <img src="assets/images/airline-ml.jpg" class="top" alt="Airline Passenger Satisfaction ML">
-        <div class="project-card-content">
-          <h3>Airline Passenger Satisfaction (Machine Learning)</h3>
-          <p>
-            Developed predictive models using SAS (Logistic Regression & Decision Trees) to identify key drivers of customer dissatisfaction.
-            Achieved ROC score of 0.98.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/Airline-Passenger-Satisfaction-Using-Machine-Learning" target="_blank" class="btn">Documentation</a>
-          </div>
-        </div>
-      </div>
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
-           <!-- Project 4 -->
-      <div class="project-card">
-        <img src="assets/images/bank-dashboard.jpg" class="top" alt="Bank Performance Dashboard">
-        <div class="project-card-content">
-          <h3>Bank Performance & Operational Analytics</h3>
-          <p>
-            Designed an interactive Power BI dashboard analysing 1,000+ banking transactions to track KPIs, fraud indicators and bandwidth performance tiers.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/Bank-Performance-and-Operational-Analytics" target="_blank" class="btn">Documentation</a>
-            <a href="https://app.powerbi.com/groups/me/reports/2e0b58a6-e735-4c45-92f4-31a6c571e1d5/d74678b5934723b76859?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
-          </div>
-        </div>
-      </div>
+/* Use this only on images you want to crop from the TOP */
+.project-card img.top {
+  object-position: center top;
+}
 
-      <!-- Project 5 -->
-      <div class="project-card">
-        <img src="assets/images/renewableenergy-dashboard.jpg" class="top" alt="Renewable Energy Consumption Dashboard">
-        <div class="project-card-content">
-          <h3>Renewable Energy Consumption Trends (1970–2023)</h3>
-          <p>
-            Designed an interactive Power BI dashboard analysing renewable energy consumption trends from 1970 to 2023.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/Renewable-Energy-Consumption-Trends" target="_blank" class="btn">Documentation</a>
-            <a href="https://app.powerbi.com/groups/me/reports/e6e6151f-b33c-42bd-b886-d4f8dc4122af/dbe1b43f1b5a9fa3b247?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+.project-card-content {
+  padding: 22px;
+}
+
+.project-card-content h3 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.project-card-content p {
+  font-size: 17px;
+  margin: 0 0 14px;
+}
+
+.project-buttons {
+  margin-top: 10px;
+}
 
 /* ===== CONTACT ===== */
 #contact h2 {
