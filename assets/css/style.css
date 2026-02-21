@@ -175,21 +175,6 @@ nav a:hover {
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="project-card">
-        <img src="assets/images/bank-dashboard.jpg" class="top" alt="Bank Performance Dashboard">
-        <div class="project-card-content">
-          <h3>Bank Performance & Operational Analytics</h3>
-          <p>
-            Designed an interactive Power BI dashboard analysing 1,000+ banking transactions to track KPIs, fraud indicators and bandwidth performance tiers.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/OlubukolaSoneye/Bank-Performance-and-Operational-Analytics" target="_blank" class="btn">Documentation</a>
-            <a href="https://app.powerbi.com/groups/me/reports/2e0b58a6-e735-4c45-92f4-31a6c571e1d5/d74678b5934723b76859?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
-          </div>
-        </div>
-      </div>
-
       <!-- Project 5 -->
       <div class="project-card">
         <img src="assets/images/renewableenergy-dashboard.jpg" class="top" alt="Renewable Energy Consumption Dashboard">
