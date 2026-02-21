@@ -69,19 +69,27 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 70px;
     text-align: left;
     flex-wrap: wrap;
 }
 
 .profile-photo {
-    width: 360px;
-    height: 360px;
-    object-fit: contain;   /* prevents head from being cropped */
+    width: 380px;
+    height: 380px;
+    object-fit: contain;      /* prevents head cropping */
     border-radius: 50%;
-    background: white;     /* fills circle behind image */
-    padding: 10px;         /* prevents hard crop edges */
+    background: white;
+    padding: 10px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* ===== PROJECTS ===== */
