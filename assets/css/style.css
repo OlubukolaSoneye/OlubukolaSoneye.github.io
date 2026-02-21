@@ -69,8 +69,16 @@ nav a:hover {
 }
 
 .profile-photo {
-    width: 180px;
+    width: 300px;       /* was 220px */
+    height: 300px;      /* keep equal for circle */
+    object-fit: cover;
     border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    text-align: center;
 }
 
 /* PROJECTS */
