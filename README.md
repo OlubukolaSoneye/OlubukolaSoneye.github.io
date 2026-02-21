@@ -1,8 +1,5 @@
 # Bukola Soneye – Data Analytics Portfolio
 
-Welcome to my Data Analytics Portfolio.  
-This site showcases selected projects across financial services, fraud analytics, business intelligence, and performance analysis. Each project demonstrates structured problem-solving, strong SQL/Python capability, and clear data storytelling for business impact.
-
 ---
 
 ## 🚀 Projects
