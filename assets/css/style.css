@@ -65,25 +65,23 @@ nav a:hover {
 
 /* ===== ABOUT SECTION ===== */
 
-#about {
-    text-align: center;
-}
-
 .about-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
+    text-align: left;
+    flex-wrap: wrap;
 }
 
 .profile-photo {
     width: 360px;
     height: 360px;
-    object-fit: cover;
+    object-fit: contain;   /* prevents head from being cropped */
     border-radius: 50%;
-    display: block;
-    margin: 0 auto;
+    background: white;     /* fills circle behind image */
+    padding: 10px;         /* prevents hard crop edges */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 /* ===== PROJECTS ===== */
