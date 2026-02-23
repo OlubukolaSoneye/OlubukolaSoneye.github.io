@@ -95,9 +95,9 @@ nav a:hover {
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  gap: 55px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 /* IMPORTANT: circle + no head cut */
