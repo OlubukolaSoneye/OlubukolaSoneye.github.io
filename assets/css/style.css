@@ -178,6 +178,28 @@ nav a:hover {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-content h3 {
+    font-size: 18px;
+  }
+
+  .project-card-content p {
+    font-size: 15px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons a {
+    text-align: center;
+  }
+}
+
 /* ================= SKILLS SECTION ================= */
 
 #skills h2 {
