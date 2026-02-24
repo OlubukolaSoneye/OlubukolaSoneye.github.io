@@ -191,10 +191,6 @@ nav a:hover {
     font-size: 15px;
   }
 
-  .project-buttons {
-    flex-direction: column;
-  }
-
   .project-buttons a {
     text-align: center;
   }
@@ -328,37 +324,43 @@ footer {
 
 /* ===== BUTTONS ===== */
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
   background-color: #1f2a44;
   color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   transition: background-color 0.2s ease, transform 0.2s ease;
   border: none;
   cursor: pointer;
-  white-space: nowrap;        /* prevents text wrapping */
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #2e3b5c;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: #1f2a44;
   color: #ffffff;
-  border: 2px solid #1f2a44;
+  border: none;
 }
 
 .btn-secondary:hover {
   background-color: #2e3b5c;
-  color: #ffffff;
 }
 
 .project-buttons {
   display: flex;
-  flex-direction: row;        /* forces side by side */
+  flex-direction: row !important;
   gap: 10px;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: nowrap;
 }
