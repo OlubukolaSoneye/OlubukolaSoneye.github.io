@@ -362,6 +362,7 @@ footer {
 .project-buttons {
   display: flex;
   gap: 10px;
-  align-items: center;        /* keeps buttons same height */
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;    /* centers the buttons */
 }
