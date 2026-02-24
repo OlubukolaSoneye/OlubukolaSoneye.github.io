@@ -343,26 +343,22 @@ footer {
   white-space: nowrap;        /* prevents text wrapping */
 }
 
-.btn:hover {
-  background-color: #2e3b5c;
-  transform: translateY(-2px);
-}
-
 .btn-secondary {
-  background-color: transparent;
-  color: #1f2a44;
+  background-color: #1f2a44;
+  color: #ffffff;
   border: 2px solid #1f2a44;
 }
 
 .btn-secondary:hover {
-  background-color: #1f2a44;
+  background-color: #2e3b5c;
   color: #ffffff;
 }
 
 .project-buttons {
   display: flex;
+  flex-direction: row;        /* forces side by side */
   gap: 10px;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;    /* centers the buttons */
+  justify-content: center;
 }
