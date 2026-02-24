@@ -325,3 +325,35 @@ footer {
     font-size: 18px;
   }
 }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1f2a44;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2e3b5c;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1f2a44;
+  border: 2px solid #1f2a44;
+}
+
+.btn-secondary:hover {
+  background-color: #1f2a44;
+  color: #ffffff;
+}
